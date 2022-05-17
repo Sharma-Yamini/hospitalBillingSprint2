@@ -24,7 +24,7 @@ model=new Patient();
   }
   onSubmit(myForm:NgForm){
     this.patientsService.addPatient().subscribe({
-      next:(data) => { },
+      next:(data) => {console.log("Successfully added your details.You will shortly receive an email." ); },
       complete:() => {console.log("Successfully added your details.You will shortly receive an email." ); },
       error:(err) => { console.log("Unable to Create New User" + err);}
       })
